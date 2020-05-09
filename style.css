@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:600&display=swap");
+
+.date{
+    text-align: right;
+}
+td{
+    font-size: 1.2em;
+}
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+#save_button1{
+  position: absolute;
+  left: 50;
+  top: 50;
+  z-index: 1000;
+}
+#edit_button1{
+  position: absolute;
+  left: 50;
+  top: 50;
+ z-index: 1001;
+}
+#save_button2{
+  position: absolute;
+  left: 50;
+  top: 50;
+  z-index: 1000;
+}
+#edit_button2{
+  position: absolute;
+  left: 50;
+  top: 50;
+ z-index: 1001;
+}
+#save_button3{
+  position: absolute;
+  left: 50;
+  top: 50;
+  z-index: 1000;
+}
+#edit_button3{
+  position: absolute;
+  left: 50;
+  top: 50;
+ z-index: 1001;
+}
+#save_button4{
+  position: absolute;
+  left: 50;
+  top: 50;
+  z-index: 1000;
+}
+#edit_button4{
+  position: absolute;
+  left: 50;
+  top: 50;
+ z-index: 1001;
+}
+#save_button5{
+  position: absolute;
+  left: 50;
+  top: 50;
+  z-index: 1000;
+}
+#edit_button5{
+  position: absolute;
+  left: 50;
+  top: 50;
+ z-index: 1001;
+}
+#save_button6{
+  position: absolute;
+  left: 50;
+  top: 50;
+  z-index: 1000;
+}
+#edit_button6{
+  position: absolute;
+  left: 50;
+  top: 50;
+ z-index: 1001;
+}
+#save_button7{
+  position: absolute;
+  left: 50;
+  top: 50;
+  z-index: 1000;
+}
+#edit_button7{
+  position: absolute;
+  left: 50;
+  top: 50;
+ z-index: 1001;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0;
+  
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  color: #363839;
+  border: 1px solid #bdc1c6;
+  border-radius: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  cursor: pointer;
+  -webkit-transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+  transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+}
+input[type="checkbox"]::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 2px;
+  left: 7px;
+  width: 8px;
+  height: 14px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+}
+input[type="checkbox"]:checked {
+  color: #fff;
+  border-color: #06842c;
+  background: #06842c;
+}
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+input[type="checkbox"]:checked ~ label::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+label {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 0 0.25em 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+label::before {
+  position: absolute;
+  content: attr(data-content);
+  color: #9c9e9f;
+  -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+          clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  -webkit-text-decoration-color: #363839;
+          text-decoration-color: #363839;
+  -webkit-transition: -webkit-clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+span{
+  font-size: 25px;
+  
+}
+#col{
+  font-size: 20px;
+}

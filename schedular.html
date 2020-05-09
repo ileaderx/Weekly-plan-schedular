@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <table class="table" id="data_table">
+    <thead class="thead-dark">
+      <tr>
+        <th>
+          <h2>Weekly plan for Project Manager</h2>
+          <h5>First Week</h5>
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th id="col">Day </th>
+        <th id="col">Discription</th>
+        <th id="col">Priority</th>
+        <th id="col">Time to complete</th>
+        <th id="col">Task</th>
+        <th id="col">Responsible person</th>
+        <th id="col">Check complete</th>
+        <th id="col demo"><span class="date " id="demo"></span></th>
+        </tr>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="row1">
+        <td id="day_row1">Monday</td>
+        <td id="des_row1">Call costumer</td>
+        <td id="prio_row1">Important</td>
+        <td id="time_row1">1 Hour</td>
+        <td id="task_row1">Call</td>
+        <td id="res_row1">Jacob</td>
+        <td><input type="checkbox" id="todo" name="todo1" value="todo" onchange="checkboxes()">
+          <label for="todo" data-content="Not Complete">Not Complete</label></td>
+        <td>
+          <input type="button" id="edit_button1" value="Edit" class="edit btn btn-dark btn-lg" onclick="edit_row('1')">
+          <input type="button" id="save_button1" value="Save" class="save btn btn-primary btn-md" onclick="save_row('1')"><br><br>
+          <input type="button" value="Delete" class="delete btn btn-dark btn-lg" onclick="delete_row('1')">
+        </td>
+      </tr>
+      <tr id="row2">
+        <td id="day_row2">Tuesday</td>
+        <td id="des_row2">Meeting</td>
+        <td id="prio_row2">Very important</td>
+        <td id="time_row2">2 Hours</td>
+        <td id="task_row2">Go to meeting</td>
+        <td id="res_row2">Ibrahem</td>
+        <td><input type="checkbox" id="todo2" name="todo2" value="todo" onchange="checkboxes()">
+          <label for="todo2" data-content="Not Complete">Not Complete</label></td>
+          <td>
+            <input type="button" id="edit_button2" value="Edit" class="edit btn btn-dark btn-lg" onclick="edit_row('2')">
+            <input type="button" id="save_button2" value="Save" class="save btn btn-primary btn-md" onclick="save_row('2')"><br><br>
+            <input type="button" value="Delete" class="delete btn btn-dark btn-lg" onclick="delete_row('2')">
+          </td>
+      </tr>
+      <tr id="row3">
+        <td id="day_row3">Wednsday</td>
+        <td id="des_row3">Do work paper</td>
+        <td id="prio_row3">Important</td>
+        <td id="time_row3">5 Hours</td>
+        <td id="task_row3">Stay in office</td>
+        <td id="res_row3">Thornton</td>
+        <td><input type="checkbox" id="todo3" name="todo3" value="todo" onchange="checkboxes()">
+          <label for="todo3" data-content="Not Complete">Not Complete</label></td>
+          <td>
+            <input type="button" id="edit_button3" value="Edit" class="edit btn btn-dark btn-lg" onclick="edit_row('3')">
+            <input type="button" id="save_button3" value="Save" class="save btn btn-primary btn-md" onclick="save_row('3')"><br><br>
+            <input type="button" value="Delete" class="delete btn btn-dark btn-lg" onclick="delete_row('3')">
+          </td>
+      </tr>
+      <tr id="row4">
+        <td id="day_row4">Thursday</td>
+        <td id="des_row4">Meet partners</td>
+        <td id="prio_row4">Not important</td>
+        <td id="time_row4">2 Hours</td>
+        <td id="task_row4">Go to their company</td>
+        <td id="res_row4">Hemo</td>
+        <td><input type="checkbox" id="todo4" name="todo4" value="todo" onchange="checkboxes()">
+          <label for="todo4" data-content="Not Complete">Not Complete</label></td>
+          <td>
+            <input type="button" id="edit_button4" value="Edit" class="edit btn btn-dark btn-lg" onclick="edit_row('4')">
+            <input type="button" id="save_button4" value="Save" class="save btn btn-primary btn-md" onclick="save_row('4')"><br><br>
+            <input type="button" value="Delete" class="delete btn btn-dark btn-lg" onclick="delete_row('4')">
+          </td>
+      </tr>
+      <tr id="row5">
+        <td id="day_row5">Friday</td>
+        <td id="des_row5">Meeting</td>
+        <td id="prio_row5">Very important</td>
+        <td id="time_row5">3 Hours</td>
+        <td id="task_row5">Go to meeting</td>
+        <td id="res_row5">Chris</td>
+        <td><input type="checkbox" id="todo5" name="todo5" value="todo" onchange="checkboxes()">
+          <label for="todo5" data-content="Not Complete">Not Complete</label></td>
+          <td>
+            <input type="button" id="edit_button5" value="Edit" class="edit btn btn-dark btn-lg" onclick="edit_row('5')">
+            <input type="button" id="save_button5" value="Save" class="save btn btn-primary btn-md"
+              onclick="save_row('5')"><br><br>
+            <input type="button" value="Delete" class="delete btn btn-dark btn-lg" onclick="delete_row('5')">
+          </td>
+      </tr>
+      <tr id="row6">
+        <td id="day_row6">Saturday</td>
+        <td id="des_row6">Shopping</td>
+        <td id="prio_row6">Urgent</td>
+        <td id="time_row6">5 Hours</td>
+        <td id="task_row6">Go to downtown</td>
+        <td id="res_row6">WARD</td>
+        <td><input type="checkbox" id="todo6" name="todo6" value="todo" onchange="checkboxes()">
+          <label for="todo6" data-content="Not Complete">Not Complete</label></td>
+          <td>
+            <input type="button" id="edit_button6" value="Edit" class="edit btn btn-dark btn-lg" onclick="edit_row('6')">
+            <input type="button" id="save_button6" value="Save" class="save btn btn-primary btn-md"
+              onclick="save_row('6')"><br><br>
+            <input type="button" value="Delete" class="delete btn btn-dark btn-lg" onclick="delete_row('6')">
+          </td>
+      </tr>
+      <tr id="row7">
+        <td id="day_row7">Sunday</td>
+        <td id="des_row7">Go swimming</td>
+        <td id="prio_row7">So So</td>
+        <td id="time_row7">2 Hours</td>
+        <td id="task_row7">Go to swim with friends</td>
+        <td id="res_row7">WARD</td>
+        <td><input type="checkbox" id="todo7" name="todo7" value="todo" onchange="checkboxes()">
+          <label for="todo7" data-content="Not Complete">Not Complete</label></td>
+          <td>
+            <input type="button" id="edit_button7" value="Edit" class="edit btn btn-dark btn-lg" onclick="edit_row('7')">
+            <input type="button" id="save_button7" value="Save" class="save btn btn-primary btn-md"
+              onclick="save_row('7')"><br><br>
+            <input type="button" value="Delete" class="delete btn btn-dark btn-lg" onclick="delete_row('7')">
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+
+    var today = new Date();
+
+    var date = (today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear();
+
+
+    var dateTime = date
+
+    document.getElementById("demo").innerHTML = dateTime;
+
+
+    function checkboxes() {
+      var inputElems = document.getElementsByTagName("input"),
+        count = 0;
+      for (var i = 0; i < inputElems.length; i++) {
+        if (inputElems[i].type === "checkbox" && inputElems[i].checked === true) {
+          count++;
+          alert(count + " Task Comleted");
+        }
+      }
+    }
+
+
+
+    function edit_row(no) {
+      document.getElementById("edit_button" + no).style.display = "none";
+      document.getElementById("save_button" + no).style.display = "block";
+
+      var day = document.getElementById("day_row" + no);
+      var des = document.getElementById("des_row" + no);
+      var prio = document.getElementById("prio_row" + no);
+      var time = document.getElementById("time_row" + no);
+      var task = document.getElementById("task_row" + no);
+      var res = document.getElementById("res_row" + no);
+
+      var day_data = day.innerHTML;
+      var des_data = des.innerHTML;
+      var prio_data = prio.innerHTML;
+      var time_data = time.innerHTML;
+      var task_data = task.innerHTML;
+      var res_data = res.innerHTML;
+
+      day.innerHTML = "<input type='text' id='day_text" + no + "' value='" + day_data + "'>";
+      des.innerHTML = "<input type='text' id='des_text" + no + "' value='" + des_data + "'>";
+      prio.innerHTML = "<input type='text' id='prio_text" + no + "' value='" + prio_data + "'>";
+      time.innerHTML = "<input type='text' id='time_text" + no + "' value='" + time_data + "'>";
+      task.innerHTML = "<input type='text' id='task_text" + no + "' value='" + task_data + "'>";
+      res.innerHTML = "<input type='text' id='res_text" + no + "' value='" + res_data + "'>";
+    }
+
+    function save_row(no) {
+      document.getElementById("edit_button" + no).style.display = "block";
+      document.getElementById("save_button" + no).style.display = "none";
+
+      var day_val = document.getElementById("day_text" + no).value;
+      var des_val = document.getElementById("des_text" + no).value;
+      var prio_val = document.getElementById("prio_text" + no).value;
+      var time_val = document.getElementById("time_text" + no).value;
+      var task_val = document.getElementById("task_text" + no).value;
+      var res_val = document.getElementById("res_text" + no).value;
+
+      document.getElementById("day_row" + no).innerHTML = day_val;
+      document.getElementById("des_row" + no).innerHTML = des_val;
+      document.getElementById("prio_row" + no).innerHTML = prio_val;
+      document.getElementById("time_row" + no).innerHTML = time_val;
+      document.getElementById("task_row" + no).innerHTML = task_val;
+      document.getElementById("res_row" + no).innerHTML = res_val;
+
+
+    }
+
+    function delete_row(no) {
+      document.getElementById("row" + no + "").outerHTML = "";
+    }
+
+  </script>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+<html>
